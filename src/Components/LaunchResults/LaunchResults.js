@@ -7,7 +7,7 @@ class LaunchResults extends React.Component {
         return (
           <div className="LaunchResults">
             <h2> Users </h2>
-            <UserList users={this.props.searchResults} />
+            <UserList users={this.props.usersArray} />
           </div>
         );
     }

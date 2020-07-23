@@ -1,3 +1,8 @@
 .UserList {
     width: 100%;
   }
+
+  h3{
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }

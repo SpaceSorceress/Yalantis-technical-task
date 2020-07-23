@@ -8,10 +8,17 @@ import User from "../User/User";
     render() {
         return (
           <div className="UserList">
-                    <User
-
-                    />
-                 
+            {this.props.users.map((user)=>{
+                return (<User 
+                firstName={user.firstName}
+                lastName={user.lastName}
+                id={`Id: ${user.id}`}
+                dob={`Date of birth: ${user.dob}`}
+                key={user.id}
+                />
+            );
+            })}
+            <User />
           </div>
         );
     }

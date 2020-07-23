@@ -7,12 +7,12 @@ class User extends React.Component {
     return (
       <div className="User">
         <div className="User-information">
-          <h3>Dana | Rigano</h3>
-          <p>
-            id
-          </p>
+          <h3>
+            {this.props.firstName} {this.props.lastName}
+          </h3>
+          <p>{this.props.dob}</p>
+          
         </div>
-    
       </div>
     );
   }

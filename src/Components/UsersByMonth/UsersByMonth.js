@@ -7,7 +7,8 @@ class UserByMonth extends React.Component {
     return (
       <div className="UserList">
         <h2>Users by month</h2>
-        <User />
+        <h3 id="selectedMonth"></h3>
+        <div id="userList"></div>
       </div>
     );
   }

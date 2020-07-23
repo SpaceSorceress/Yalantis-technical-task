@@ -20,7 +20,23 @@
     height: 2rem;
     padding: 0.5rem;
 }
+.singleMonth:hover{
+  font-weight: bold;
+  cursor: pointer;
+}
 
+.few{
+  color: gainsboro;
+}
+.three-six{
+  color:rgb(0,191,255);
+}
+.seven-ten{
+  color:	rgb(0,250,154);
+}
+.many{
+  color: 	rgb(220,20,60);
+}
   h2{
     padding: 2rem 0 0.5rem 0;
     border-bottom: 1px solid #6f6f6f;
