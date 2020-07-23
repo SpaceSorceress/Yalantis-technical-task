@@ -1,0 +1,35 @@
+.Months {
+    width: 45%;
+    height: 950px;
+    overflow-y: scroll;
+    padding: .88rem;
+    background-color: rgba(1, 12, 63, 0.7);
+    box-shadow: 0 4px 2px 2px #000000;
+  }
+
+.twelveMonths{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.2rem;
+    text-align: center;
+}
+.singleMonth{
+    width: 5rem;
+    height: 2rem;
+    padding: 0.5rem;
+}
+
+  h2{
+    padding: 2rem 0 0.5rem 0;
+    border-bottom: 1px solid #6f6f6f;
+  }
+
+  @media only screen and (max-width: 1020px)
+{
+.Months {
+    width: 90%;
+    margin-bottom: 2rem;
+}
+}

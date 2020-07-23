@@ -1,0 +1,86 @@
+body,
+html,
+#root {
+  height: 100%;
+}
+
+html {
+  font-size: 18px;
+}
+
+h1 {
+  padding: .77rem 0;
+  background-color: #010c3f;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.88rem;
+  color: #fff;
+}
+
+h1 .highlight {
+  color: #6c41ec;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.55rem;
+}
+
+.App {
+  height: 100%;
+  padding: 0 17% 10% 17%;
+  background-image: url('./isaac-quesada.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  color: #fff;
+}
+
+.App-userlist {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Months{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 37%;
+}
+footer{
+    padding: .77rem 0;
+    background-color: #010c3f;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+}
+footer h3{
+  padding-top: 0.3rem;
+}
+footer span{
+  font-size: 0.75rem;
+}
+
+@media only screen and (max-width: 1020px) {
+  .App-userlist {
+    align-items: center;
+    flex-direction: column;
+  }
+  .Months{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  footer{
+    font-size: 0.75rem;
+  }
+  footer span{
+    font-size: smaller;
+  }
+}
+
