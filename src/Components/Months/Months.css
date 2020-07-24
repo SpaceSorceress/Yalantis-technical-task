@@ -1,23 +1,24 @@
 .Months {
     width: 45%;
-    height: 950px;
+    min-height: 400px;
+    max-height: 950px;
     overflow-y: scroll;
     padding: .88rem;
     background-color: rgba(1, 12, 63, 0.7);
     box-shadow: 0 4px 2px 2px #000000;
   }
 
-.twelveMonths{
-    display: flex;
+#twelveMonths{
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 1.2rem;
-    text-align: center;
+    
 }
 .singleMonth{
     width: 5rem;
-    height: 2rem;
+    /*height: 2rem;*/
     padding: 0.5rem;
 }
 .singleMonth:hover{

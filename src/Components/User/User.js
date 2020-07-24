@@ -11,7 +11,6 @@ class User extends React.Component {
             {this.props.firstName} {this.props.lastName}
           </h3>
           <p>{this.props.dob}</p>
-          
         </div>
       </div>
     );

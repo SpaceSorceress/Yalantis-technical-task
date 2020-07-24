@@ -24,6 +24,7 @@ class App extends React.Component {
     this.setState({
       usersArray: usersArray,
     });
+    document.getElementById("twelveMonths").style.display = "flex";
     this.sortByMonth();
   }
 
@@ -127,7 +128,7 @@ class App extends React.Component {
           </div>
         </div>
         <footer>
-          <h3>Siriakivska Iuliia | 2020</h3> <br />
+          <h3>by Siriakivska Iuliia </h3> <br />
         </footer>
       </div>
     );

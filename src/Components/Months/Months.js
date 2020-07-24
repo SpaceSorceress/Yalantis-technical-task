@@ -17,7 +17,7 @@ class Months extends React.Component {
     return (
       <div>
         <h2> Months</h2>
-        <div className="twelveMonths">
+        <div  id="twelveMonths">
           <div className="singleMonth" id="1" onMouseOver={this.handleClick}>
             January
           </div>
