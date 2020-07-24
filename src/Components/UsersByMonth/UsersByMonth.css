@@ -6,3 +6,25 @@
     font-size: 1.4rem;
     margin-top: 1rem;
   }
+ #userList h3{
+   font-size: 1rem;
+    margin-top: 0rem;
+ }
+
+  #userList .User-information {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40px;
+  }
+  #userList {
+    margin-top: 1rem;
+  }
+  #userList .User-information h3 {
+    margin-bottom: 0rem;
+  }
+  li{
+    list-style: decimal;
+    margin-left: 2rem;
+  }

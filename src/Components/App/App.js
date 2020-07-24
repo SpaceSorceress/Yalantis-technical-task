@@ -12,9 +12,11 @@ class App extends React.Component {
     this.state = {
       usersArray: [],
       monthsObj: [],
+      usersInSelectedMonth: [],
     };
     this.getUsers = this.getUsers.bind(this);
     this.sortByMonth = this.sortByMonth.bind(this);
+    this.showListOfUsersByMonth = this.showListOfUsersByMonth.bind(this);
   }
 
   async getUsers() {
@@ -57,17 +59,17 @@ class App extends React.Component {
     this.setHighlights();
   }
 
-  setHighlights(){
+  setHighlights() {
     let months = this.state.monthsObj;
     let numberOfMonths = Object.keys(months).length;
-    for (let i = 1; i < numberOfMonths+1; i++) {
+    for (let i = 1; i < numberOfMonths + 1; i++) {
       let m;
-      if(i<10){
-        m="0"+i;
-      }else{
-        m=""+i;
+      if (i < 10) {
+        m = "0" + i;
+      } else {
+        m = "" + i;
       }
-      
+
       let numbersOfPeople = months[m].length;
       if (numbersOfPeople < 3) {
         document.getElementById(i).classList.add("few");
@@ -81,19 +83,30 @@ class App extends React.Component {
     }
   }
 
-  showListOfUsersByMonth(event){
+  showListOfUsersByMonth(event) {
     //get the element which triggered event
-    const monthElement=event.target;
-    const monthName=monthElement.innerText;
-    document.getElementById("selectedMonth").innerHTML=monthName;
-    const id=monthElement.id;
-    let indexInObj
-    if(id<10){
-      indexInObj="0"+id;
-    }else{
-      indexInObj=""+id;
+    const monthElement = event;
+    const months = this.state.monthsObj;
+    const monthName = monthElement.innerText;
+    const id = monthElement.id;
+
+    let indexInObj;
+    if (id < 10) {
+      indexInObj = "0" + id;
+    } else {
+      indexInObj = "" + id;
     }
-    console.log(indexInObj);
+    //creating an array which will consist of names only by selected month
+    let arrayOfUsersBySelectedMonth = months[indexInObj];
+    if (arrayOfUsersBySelectedMonth) {
+      document.getElementById("selectedMonth").innerHTML = monthName;
+      let arrayOfNames = arrayOfUsersBySelectedMonth.map((element) => {
+        return element.name;
+      });
+      this.setState({
+        usersInSelectedMonth: arrayOfNames,
+      });
+    }
   }
 
   render() {
@@ -105,8 +118,11 @@ class App extends React.Component {
           <div className="App-userlist">
             <LaunchResults usersArray={this.state.usersArray} />
             <div className="Months">
-              <Months months={this.state.monthsObj}
-              onClick={this.showListOfUsersByMonth} />
+              <Months
+                months={this.state.monthsObj}
+                onClick={this.showListOfUsersByMonth}
+                listOfUsers={this.state.usersInSelectedMonth}
+              />
             </div>
           </div>
         </div>
