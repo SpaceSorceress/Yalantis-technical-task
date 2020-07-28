@@ -39,8 +39,26 @@ h2 {
   font-weight: 500;
   color: #fff;
 }
+#errorBlock{
+   display: none;
+    width: 100%;
+    min-height: fit-content;
+    padding: .88rem;
+    background-color: rgba(1, 12, 63, 0.7);
+    box-shadow: 0 4px 2px 2px #000000;
+}
+#errorBlock p{
+  text-align: center;
+  padding: 1rem;
+}
+#errorBlock #errorCode{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
 
-.App-userlist {
+#App-userlist {
+  visibility: hidden;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -60,15 +78,10 @@ footer{
     font-size: 1rem;
     color: #fff;
 }
-footer h3{
-  padding-top: 0.3rem;
-}
-footer span{
-  font-size: 0.75rem;
-}
+
 
 @media only screen and (max-width: 1020px) {
-  .App-userlist {
+  #App-userlist {
     align-items: center;
     flex-direction: column;
   }

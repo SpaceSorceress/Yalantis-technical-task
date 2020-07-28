@@ -21,11 +21,19 @@ class App extends React.Component {
 
   async getUsers() {
     const usersArray = await getDataFromYalantis();
-    this.setState({
+    if(!(usersArray instanceof Array)){
+      let code = usersArray.status;
+      document.getElementById("errorBlock").style.display="block";
+      document.getElementById("errorCode").innerText=`Error ${code}`
+    }else{
+      document.getElementById("App-userlist").style.visibility = "visible";
+      this.setState({
       usersArray: usersArray,
     });
     document.getElementById("twelveMonths").style.display = "flex";
     this.sortByMonth();
+    }
+    
   }
 
   sortByMonth() {
@@ -116,7 +124,11 @@ class App extends React.Component {
         <h1>Yalantis</h1>
         <div className="App">
           <LaunchBar onClick={this.getUsers} />
-          <div className="App-userlist">
+          <div id="errorBlock">
+            <p>We're sorry, but something is not working as we expected.</p>
+            <p><span id="errorCode">Error</span></p>
+          </div>
+          <div id="App-userlist">
             <LaunchResults usersArray={this.state.usersArray} />
             <div className="Months">
               <Months

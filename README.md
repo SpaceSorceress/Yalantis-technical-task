@@ -1,3 +1,31 @@
+# Project Description 
+## Task:
+A GET call to: 
+ >`https: // yalantis-react-school-api.yalantis.com / api / task0 / users` </br>
+ 
+ Returns an array of users. Each user has the following fields: id, firstName, lastName, dob (date of birth).
+
+
+## Implement:
+1) Loading of users
+2) Display the list of months
+3) Highlight the months depending on the number of people born in that month.
+4) When hovering over the selected month - display a list of people born in that month.
+
+
+### Condition for the number of people to highlight the months:
+[0-2] - gray<br>
+[3-6] - blue<br>
+[7-10] - green<br>
+[11+] - red
+
+
+
+
+
+
+
+-------
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

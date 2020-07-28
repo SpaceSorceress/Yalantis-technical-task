@@ -11,7 +11,7 @@ class UserByMonth extends React.Component {
         <ol id="userList">
          {this.props.listOfUsers.map(user=>{
            return (
-             <li>
+             <li key={user}>
                <User firstName={user} key={user} />
              </li>
            );
