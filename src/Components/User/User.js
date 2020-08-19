@@ -1,20 +1,18 @@
 import React from "react";
 import "./User.css";
 
-class User extends React.Component {
-  
-  render() {
+function User(props) {
     return (
       <div className="User">
         <div className="User-information">
           <h3>
-            {this.props.firstName} {this.props.lastName}
+            {props.firstName} {props.lastName}
           </h3>
-          <p>{this.props.dob}</p>
+          <p>{props.dob}</p>
         </div>
       </div>
     );
   }
-}
+
 
 export default User;

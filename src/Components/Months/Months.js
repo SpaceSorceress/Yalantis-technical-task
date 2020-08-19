@@ -1,64 +1,71 @@
 import React from "react";
 import "./Months.css";
 import UsersByMonth from "../UsersByMonth/UsersByMonth";
-class Months extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.handleClick=this.handleClick.bind(this);
-  }
-
-  handleClick(event) {
+function Months(props){
+  
+  function handleMouse(event) {
     const eventTarget = event.target;
-    this.props.onClick(eventTarget);
+    props.onMouse(eventTarget);
   }
 
-  render() {
+  
     return (
       <div>
         <h2> Months</h2>
-        <div  id="twelveMonths">
-          <div className="singleMonth" id="1" onMouseOver={this.handleClick}>
+        <div id="twelveMonths">
+          <div className="singleMonth" id="1" onMouseOver={handleMouse}>
             January
           </div>
-          <div className="singleMonth" id="2" onMouseOver={this.handleClick}>
+          <div className="singleMonth" id="2" onMouseOver={handleMouse}>
             February
           </div>
-          <div className="singleMonth" id="3" onMouseOver={this.handleClick}>
+          <div className="singleMonth" id="3" onMouseOver={handleMouse}>
             March
           </div>
-          <div className="singleMonth" id="4" onMouseOver={this.handleClick}>
+          <div className="singleMonth" id="4" onMouseOver={handleMouse}>
             April
           </div>
-          <div className="singleMonth" id="5" onMouseOver={this.handleClick}>
+          <div className="singleMonth" id="5" onMouseOver={handleMouse}>
             May
           </div>
-          <div className="singleMonth" id="6" onMouseOver={this.handleClick}>
+          <div className="singleMonth" id="6" onMouseOver={handleMouse}>
             June
           </div>
-          <div className="singleMonth" id="7" onMouseOver={this.handleClick}>
+          <div className="singleMonth" id="7" onMouseOver={handleMouse}>
             July
           </div>
-          <div className="singleMonth" id="8" onMouseOver={this.handleClick}>
+          <div className="singleMonth" id="8" onMouseOver={handleMouse}>
             Aughust
           </div>
-          <div className="singleMonth" id="9" onMouseOver={this.handleClick}>
+          <div className="singleMonth" id="9" onMouseOver={handleMouse}>
             September
           </div>
-          <div className="singleMonth" id="10" onMouseOver={this.handleClick}>
+          <div
+            className="singleMonth"
+            id="10"
+            onMouseOver={handleMouse}
+          >
             October
           </div>
-          <div className="singleMonth" id="11" onMouseOver={this.handleClick}>
+          <div
+            className="singleMonth"
+            id="11"
+            onMouseOver={handleMouse}
+          >
             November
           </div>
-          <div className="singleMonth" id="12" onMouseOver={this.handleClick}>
+          <div
+            className="singleMonth"
+            id="12"
+            onMouseOver={handleMouse}
+          >
             December
           </div>
         </div>
-        <UsersByMonth listOfUsers={this.props.listOfUsers} />
+        <UsersByMonth listOfUsers={props.listOfUsers} />
       </div>
     );
-  }
+  
 }
 
 export default Months;

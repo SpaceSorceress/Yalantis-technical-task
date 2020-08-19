@@ -1,17 +1,14 @@
 import React from "react";
 import "./LaunchBar.css";
 
-class LaunchBar extends React.Component {
-
-  render() {
+function LaunchBar (props){
     return (
       <div className="LaunchBar">
-        <button className="LaunchButton" onClick={this.props.onClick}>
+        <button className="LaunchButton" onClick={props.onClick}>
           LOAD USERS
         </button>
       </div>
     );
-  }
 }
 
 export default LaunchBar;
